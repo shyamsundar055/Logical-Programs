@@ -14,13 +14,13 @@ namespace LogicalPrograms
             //Merge Two String Arrays
             string[] firstStrArray = { "a", "b", "c" };
             string[] secondStrArray = { "d", "e", "f","g","h"};
-            LogicalProgramSolutions.MergeTwoArray(firstStrArray, secondStrArray);
+            LogicalProgramSolutions.MergeTwoArrays(firstStrArray, secondStrArray);
 
 
             //Merge Two Int Arrays
             int[] firstIntArray = { 1, 2, 3 };
             int[] secondIntArray = { 4,5,6,7,8,9,10 };
-            LogicalProgramSolutions.MergeTwoArray(firstIntArray, secondIntArray);
+            LogicalProgramSolutions.MergeTwoArrays(firstIntArray, secondIntArray);
 
 
 

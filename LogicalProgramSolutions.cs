@@ -44,7 +44,7 @@ namespace LogicalPrograms
         /// <typeparam name="T"></typeparam>
         /// <param name="firstArray"></param>
         /// <param name="secondArray"></param>
-        public static void MergeTwoArray<T>(T[] firstArray, T[] secondArray)
+        public static void MergeTwoArrays<T>(T[] firstArray, T[] secondArray)
         {
             Console.WriteLine($"MergeTwoArray {typeof(T)} : First Array = {string.Join(" ", firstArray)} , Second Array = {string.Join(" ", secondArray)} ");
 
