@@ -8,6 +8,7 @@
 5. Identify Duplicate characters with occurance count in String - using dictionary
 6. Identify Duplicate characters with occurance count and index positions in String - without dictionary
 7. Given number is Palindrome or Not
+8. Multiply Array Data using given Multiplier
 
 #
 #### Note: Will keep adding more problems in future. Also you can share your required problem statement or any feedback to existing solutions.
