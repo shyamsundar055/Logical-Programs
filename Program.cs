@@ -57,6 +57,12 @@ namespace LogicalPrograms
 
             //Is Palindrome Number
             LogicalProgramSolutions.IsPalindromeNumber(1001);
+
+
+
+            //Multiply Array Data
+            int[] inputArrayForMultiply = { 1, 2, 3 };
+            LogicalProgramSolutions.MultiplyArrayData(inputArrayForMultiply,5);
         }
 
         

@@ -35,7 +35,7 @@ namespace LogicalPrograms
                 //output += CharUnicodeInfo.GetDecimalDigitValue(ch);
             }
 
-            Console.WriteLine($"Output : {output}\n");
+            Console.WriteLine($"Output: {output}\n");
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace LogicalPrograms
         /// <param name="secondArray"></param>
         public static void MergeTwoArrays<T>(T[] firstArray, T[] secondArray)
         {
-            Console.WriteLine($"MergeTwoArray {typeof(T)} : First Array = {string.Join(" ", firstArray)} , Second Array = {string.Join(" ", secondArray)} ");
+            Console.WriteLine($"MergeTwoArray {typeof(T)} : First Array = [{string.Join(",", firstArray)}] , Second Array = [{string.Join(",", secondArray)}] ");
 
             T[] outputArray = new T[firstArray.Length + secondArray.Length];
 
@@ -60,7 +60,7 @@ namespace LogicalPrograms
                 outputArray[firstArray.Length + i] = secondArray[i];
             }
 
-            Console.WriteLine($"Output : {string.Join(" ", outputArray)}\n");
+            Console.WriteLine($"Output: [{string.Join(",", outputArray)}]\n");
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace LogicalPrograms
         /// <param name="inputArray"></param>
         public static void SortAnIntegerArray(int[] inputArray, string orderType)
         {
-            Console.WriteLine($"SortAnArray - Order by {orderType}: {string.Join(" ", inputArray)}");
+            Console.WriteLine($"SortAnArray - Order by {orderType}: [{string.Join(",", inputArray)}]");
 
             for (int i = 0; i < inputArray.Length; i++)
             {
@@ -98,7 +98,7 @@ namespace LogicalPrograms
                 inputArray[newPickerPosition] = pickerValue;
             }
 
-            Console.WriteLine($"Output : {string.Join(" ", inputArray)}\n");
+            Console.WriteLine($"Output: [{string.Join(",", inputArray)}]\n");
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace LogicalPrograms
                 output += inputValue[i];
             }
 
-            Console.WriteLine($"Output : {output}\n");
+            Console.WriteLine($"Output: {output}\n");
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace LogicalPrograms
                 }
             }
 
-            Console.WriteLine($"Output :");
+            Console.WriteLine($"Output:");
             foreach (var item in charDetails)
             {
                 Console.WriteLine($"{item.Key} - {item.Value} ");
@@ -160,7 +160,7 @@ namespace LogicalPrograms
 
             var charList = input.ToCharArray();
 
-            Console.WriteLine($"Output :");
+            Console.WriteLine($"Output:");
 
             for (int i = 0; i < charList.Length; i++)
             {
@@ -180,7 +180,7 @@ namespace LogicalPrograms
                         }
                     }
 
-                    Console.WriteLine($"{character} - count:{count},index positions:{indexPostitions} ");
+                    Console.WriteLine($"{character} - count:{count},index positions:{indexPostitions}");
                 }
             }
         }
@@ -204,7 +204,32 @@ namespace LogicalPrograms
                 input /= 10;
             }
 
-            Console.WriteLine($"Given number is{(tempNumber == reverseNumber ? "" : "not")} a Palindrome");
+            Console.WriteLine($"Output: Given number is{(tempNumber == reverseNumber ? "" : "not")} a Palindrome\n");
+        }
+
+        /// <summary>
+        /// MultiplyArrayData
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="input"></param>
+        /// <param name="multiplier"></param>
+        public static void MultiplyArrayData<T>(T[] input, int multiplier)
+        {
+            Console.WriteLine($"MultiplyArrayData : [{string.Join(",", input)}] , multiplier value - {multiplier} ");
+
+            T[] output = new T[input.Length * multiplier];
+            int lastWritePosition = 0;
+
+            for (int i = 0; i < multiplier; i++)
+            {
+                for (int j = 0; j < input.Length; j++) {
+                    output[lastWritePosition + j] = input[j];
+
+                    if (j == (input.Length - 1))
+                        lastWritePosition = lastWritePosition + j + 1;
+                }
+            }
+            Console.WriteLine($"Output: [{string. Join(",",output)}]\n"); 
         }
     }
 }
