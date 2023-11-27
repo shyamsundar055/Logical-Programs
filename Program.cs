@@ -63,6 +63,18 @@ namespace LogicalPrograms
             //Multiply Array Data
             int[] inputArrayForMultiply = { 1, 2, 3 };
             LogicalProgramSolutions.MultiplyArrayData(inputArrayForMultiply,5);
+
+            
+
+            //Rotate Array to right by K steps
+            int[] inputRotateRightArray = { 1, 2,3,4,5,6,7 };
+            LogicalProgramSolutions.RotateArrayToRight(inputRotateRightArray, 3);
+
+
+
+            //Rotate Array to left by K steps
+            int[] inputRotateLeftArray = { 1, 2, 3, 4, 5, 6, 7 };
+            LogicalProgramSolutions.RotateArrayToLeft(inputRotateLeftArray, 3);
         }
 
         

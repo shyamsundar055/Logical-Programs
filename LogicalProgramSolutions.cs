@@ -231,5 +231,59 @@ namespace LogicalPrograms
             }
             Console.WriteLine($"Output: [{string. Join(",",output)}]\n"); 
         }
+
+        /// <summary>
+        /// Rotate Array to right by K steps
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="steps"></param>
+        public static void RotateArrayToRight(int[] input,int steps)
+        {
+            Console.WriteLine($"RotateArrayToRight : [{string.Join(",", input)}] , steps - {steps} ");
+
+            int counter = 0;
+
+            while (counter < steps)
+            {
+                int LastItem = input[input.Length - 1];
+
+                for (int i = input.Length - 2; i > -1; i--)
+                {
+                    input[i+1] = input[i];
+                }
+
+                input[0]= LastItem;
+                counter++;
+            }
+
+            Console.WriteLine($"Output:{string.Join(" ", input)}\n");
+        }
+
+        /// <summary>
+        /// Rotate Array to left by K steps
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="steps"></param>
+        public static void RotateArrayToLeft(int[] input, int steps)
+        {
+            Console.WriteLine($"RotateArrayToLeft : [{string.Join(",", input)}] , steps - {steps} ");
+
+            int counter = 0;
+
+            while (counter < steps)
+            {
+                int FirstItem = input[0];
+
+                for (int i = 1; i < input.Length; i++)
+                {
+                    input[i - 1] = input[i];
+                }
+
+                input[input.Length-1] = FirstItem;
+                counter++;
+            }
+
+            Console.WriteLine($"Output:{string.Join(" ", input)}\n");
+        }
     }
 }
